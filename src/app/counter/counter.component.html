@@ -1,0 +1,8 @@
+<div>
+    <span>Contador: {{ counter }}</span>
+    <br>
+    <button type="button" (click)="increase()">Aumentar</button>
+    <button type="button" (click)="decrease()" [disabled]="activeDecrease">Disminuir</button>
+    <br>
+    <button type="button" (click)="inactiveDecrease()">Activar/Inactivar disminuir</button>
+</div>
