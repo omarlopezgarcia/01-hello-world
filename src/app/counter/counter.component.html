@@ -1,8 +1,45 @@
-<div>
-    <span>Contador: {{ counter }}</span>
+<style>
+    .contador-container {
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: 36px;
+      color: #333;
+    }
+  
+    .contador {
+      font-size: 24px;
+      color: #555;
+    }
+  
+    .btn {
+      background-color: #c03a3a;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .btn:hover {
+        background-color: #6b1111;
+    }
+  
+    .btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+  
+<div class="contador-container">
+    <h1 class="title">APP CONTADOR</h1>
+    <span class="contador">Contador: {{ counter }}</span>
+    <br><br><br>
+    <button class="btn" type="button" (click)="increase()">Aumentar</button>
+    <button class="btn" type="button" (click)="decrease()" [disabled]="activeDecrease">Disminuir</button>
     <br>
-    <button type="button" (click)="increase()">Aumentar</button>
-    <button type="button" (click)="decrease()" [disabled]="activeDecrease">Disminuir</button>
-    <br>
-    <button type="button" (click)="inactiveDecrease()">Activar/Inactivar disminuir</button>
+    <button class="btn" type="button" (click)="inactiveDecrease()">Activar / Inactivar disminuir</button>
 </div>
